@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/cliente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body onload="obtenerIDClienteActualizar();">
+    <div class="container">
+    <!--Barra de navegacion-->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+          </a>
+        </div>
+      </nav>
+    <!--Titulo-->
+    <h1>Crear cliente</h1>
+    <hr>
+    <!--Formulario para crear cliente-->
+    <form>
+        <!--RUT-->
+        <div class="mb-3">
+          <label for="txt_id_cliente" class="form-label">RUT</label>
+          <input type="number" class="form-control" id="txt_id_cliente" aria-describedby="txt_id_cliente_ayuda">
+          <div id="txt_id_cliente_ayuda" class="form-text">Rut sin puntos ni guion</div>
+        </div>    
+
+      <!--Digito verificador-->
+        <div class="mb-3">
+            <label for="txt_dv" class="form-label">Digito verificador</label>
+            <input type="number" class="form-control" id="txt_dv" aria-describedby="txt_dv_ayuda">
+            <div id="txt_dv_ayuda" class="form-text">Digito verificador</div>
+        </div>    
+
+      <!--Nombres-->
+        <div class="mb-3">
+            <label for="txt_nombres" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="txt_nombres" aria-describedby="txt_nombres_ayuda">
+            <div id="txt_nombres_ayuda" class="form-text">Nombre del cliente</div>
+      </div>
+
+    <!--Apellidos-->
+        <div class="mb-3">
+            <label for="txt_id_cliente" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="txt_apellidos" aria-describedby="txt_apellido_ayuda">
+            <div id="txt_apellido_ayuda" class="form-text">Apellido del cliente</div>
+        </div>  
+
+        <!--Email-->
+        <div class="mb-3">
+            <label for="txt_id_cliente" class="form-label">Email</label>
+            <input type="email" class="form-control" id="txt_email" aria-describedby="txt_email_ayuda">
+            <div id="txt_email_ayuda" class="form-text">Email del cliente</div>
+        </div>  
+
+        <!--Celular-->
+        <div class="mb-3">
+            <label for="txt_id_cliente" class="form-label">Celular</label>
+            <input type="number" class="form-control" id="txt_celular" aria-describedby="emailHelp">
+            <div id="txt_celular_ayuda" class="form-text">Sin +569</div>
+        </div>  
+        <input type="button" class="btn btn-primary" onclick="crearCliente();" value="Enviar">
+    </form>
+
+
+</div>
+
+    
+</body>
+</html>
