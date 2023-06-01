@@ -83,10 +83,16 @@ function listarClientes(){
     
     fetch("http://159.223.103.211/api/cliente?_size=30/", requestOptions)
       .then(response => response.json())
-      .then((json) => json.forEach(completarFila) )
+      .then((json) => {
+        json.forEach(completarFila);
+        return json;
+    } )
+      .then((json) => {
+        $("#tbl_clientes").DataTable();
+      } )
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
-  }
+}
   //completarFila
   function completarFila (element, index, arr){
     arr[index] = document.querySelector('#tbl_clientes tbody').innerHTML +=
